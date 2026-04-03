@@ -1,0 +1,9 @@
+[package]
+name = "sgf-to-kifu"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+exitcode = "1.1.2"
+resvg = "0.47.0"
+sgf-parse = "4.2.8"
