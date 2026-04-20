@@ -136,6 +136,7 @@ fn stone_fmt(stone: &GameMove, cx: f64, cy: f64, r: f64, cell: f64) -> String {
     } else {
         ("#f8f8f8", "#333")
     };
+
     let mut s = format!(
         r#"<circle cx="{cx}" cy="{cy}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="0.8"/>"#
     );
@@ -218,7 +219,7 @@ fn board_fmt(cfg: &RenderConfig) -> String {
 
     // star points
     if cfg.board_size == 19 {
-        for &(col, row) in &[(3, 3), (16, 3), (3, 16), (16, 16), (9, 9)] {
+        for &(col, row) in &[(3, 3), (15, 3), (3, 15), (15, 15), (9, 9)] {
             let cx = cfg.margin + col as f64 * cfg.cell;
             let cy = cfg.margin + row as f64 * cfg.cell;
             svg.push_str(&format!(
